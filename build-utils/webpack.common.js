@@ -14,7 +14,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
       }
@@ -43,7 +43,10 @@ const config = {
       template: `public/index.html`,
       favicon: `public/favicon.ico`
     })
-  ]
+  ],
+  resolve: {
+    extensions: [".js", ".jsx"]
+  }
 };
 
 module.exports = config;

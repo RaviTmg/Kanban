@@ -3,15 +3,14 @@ const emptyCard = {
   Title: "",
   Description: ""
 };
-const initialState = {
-  lanes: []
-};
+const initialState = {};
 
 export function BoardReducer(state = initialState, action) {
   switch (action.type) {
     case BoardActions.ADD_LANE:
-      const newLane = { name: action.payload, cards: emptyCard };
-      return { ...state, lanes: [...state.lanes, newLane] }; //payload contains name of lane and empty card
+      const newLane = { name: action.payload, cards: [emptyCard] };
+      const lanes = state.lanes ? [...state.lanes, newLane] : [newLane];
+      return { ...state, lanes }; //payload contains name of lane and empty card
     case BoardActions.ADD_CARD:
       const { card, index } = action.payload;
       const lanetoadd = state.lanes[index];
