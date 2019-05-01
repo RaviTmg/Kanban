@@ -14,9 +14,12 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "enzyme": "^3.9.0",
+    "jest": "^24.7.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
+    "react-css-modules": "^4.7.9",
     "react-delay-render": "^0.1.2",
     "react-dom": "^16.8.6",
     "react-imported-component": "^4.6.2",
